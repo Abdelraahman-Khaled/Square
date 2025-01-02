@@ -1,0 +1,268 @@
+/* =========================== App Section Start Here ========================= */
+.app__area {
+    position: relative;
+    z-index: 1;
+    padding-bottom: rem(92px);
+    padding-top: rem(100px);
+
+    @include xl-screen {
+        padding-top: rem(50px);
+        padding-bottom: rem(72px);
+    }
+
+    @include lg-screen {
+        padding-top: rem(24px);
+        padding-bottom: rem(42px);
+    }
+
+    @include sm-screen {
+        padding-top: rem(27px);
+        padding-bottom: rem(32px);
+    }
+
+    @include msm-screen {
+        padding-top: rem(20px);
+    }
+
+    .app__bg {
+        position: absolute;
+        left: 0;
+        top: rem(-300px);
+        z-index: -1;
+        width: 100%;
+        user-select: none;
+        pointer-events: none;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .app__main {
+        position: relative;
+        z-index: 1;
+
+        &__sp {
+            position: absolute;
+            z-index: -1;
+            width: rem(90px);
+            height: rem(90px);
+            background-color: hsl(var(--white));
+            border-radius: 50%;
+            box-shadow: 0 rem(20px) rem(50px) hsla(213, 66%, 31%, 0.06);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            user-select: none;
+            pointer-events: none;
+
+            @include lg-screen {
+                width: rem(70px);
+                height: rem(70px);
+            }
+
+            @include md-screen {
+                width: rem(60px);
+                height: rem(60px);
+            }
+
+            @include sm-screen {
+                width: rem(50px);
+                height: rem(50px);
+            }
+
+            @include msm-screen {
+                display: none;
+            }
+
+            img {
+                max-width: rem(35px);
+
+                @include lg-screen {
+                    max-width: rem(28px);
+                }
+
+                @include md-screen {
+                    max-width: rem(25px);
+                }
+
+                @include sm-screen {
+                    max-width: rem(20px);
+                }
+            }
+
+            &.sp1 {
+                left: 0;
+                top: 30%;
+            }
+
+            &.sp2 {
+                right: 0;
+                top: 38%;
+            }
+
+            &.sp3 {
+                left: 18%;
+                top: 13%;
+
+                @include md-screen {
+                    left: 10%;
+                    top: 8%;
+                }
+            }
+
+            &.sp4 {
+                right: 22%;
+                top: 18%;
+
+                @include md-screen {
+                    right: 10%;
+                    top: 8%;
+                }
+            }
+        }
+
+        &__img {
+            text-align: center;
+            user-select: none;
+            pointer-events: none;
+
+            img {
+                max-width: rem(430px);
+
+                @include lg-screen {
+                    max-width: rem(380px);
+                }
+
+                @include sm-screen {
+                    max-width: rem(280px);
+                }
+            }
+        }
+
+        &__title {
+            text-align: center;
+            max-width: rem(740px);
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: rem(78px);
+            margin-top: rem(-270px);
+            position: relative;
+            z-index: 2;
+
+            @include lg-screen {
+                max-width: rem(550px);
+                margin-top: rem(-238px);
+            }
+
+            @include md-screen {
+                margin-bottom: rem(46px);
+            }
+
+            @include sm-screen {
+                max-width: rem(406px);
+                margin-top: rem(-174px);
+            }
+
+            @include msm-screen {
+                max-width: rem(406px);
+                margin-top: rem(-158px);
+                margin-bottom: rem(35px);
+            }
+
+            h2 {
+                font-size: rem(64px);
+                font-weight: 600;
+                text-transform: uppercase;
+                margin-bottom: 0;
+
+                @include xl-screen {
+                    font-size: rem(54px);
+                }
+
+                @include lg-screen {
+                    font-size: rem(44px);
+                }
+
+                @include md-screen {
+                    font-size: rem(34px);
+                }
+
+                @include xsm-screen {
+                    font-size: rem(30px);
+                }
+
+                span {
+                    font-weight: 300;
+                    display: block;
+                }
+            }
+        }
+
+        &__platform {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: rem(24px);
+            position: relative;
+            z-index: 1;
+
+            @include msm-screen {
+                flex-direction: column;
+            }
+
+            a {
+                background-color: hsl(var(--black) / 0.04);
+                border-radius: rem(50px);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: rem(15px) rem(36px);
+                color: hsl(var(--heading-color));
+                text-decoration: none;
+                transition: .4s;
+                gap: rem(7px);
+
+                @include md-screen {
+                    padding: rem(10px) rem(30px);
+                }
+
+                img {
+                    flex: 0 0 auto;
+                    width: rem(30px);
+
+                    @include md-screen {
+                        width: rem(24px);
+                    }
+                }
+
+                p {
+                    color: hsl(var(--heading-color));
+                    font-size: rem(18px);
+                    font-weight: 600;
+                    text-transform: capitalize;
+
+                    @include md-screen {
+                        font-size: rem(14px);
+                    }
+
+                    span {
+                        display: block;
+                        font-weight: 500;
+                        font-size: rem(14px);
+
+                        @include md-screen {
+                            font-size: rem(12px);
+                        }
+                    }
+                }
+
+                &:hover {
+                    background-color: hsl(var(--base));
+                }
+            }
+        }
+    }
+}
+
+/* =========================== App Section End Here ========================= */

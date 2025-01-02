@@ -1,0 +1,294 @@
+/* =========================== FAQ Section Start Here ========================= */
+.faq__area {
+    position: relative;
+    z-index: 1;
+    padding-top: rem(50px);
+    padding-bottom: rem(24px);
+
+    @include lg-screen {
+        padding-top: rem(43px);
+    }
+
+    @include md-screen {
+        padding-top: rem(27px);
+        padding-bottom: rem(15px);
+    }
+
+    @include sm-screen {
+        padding-top: rem(16px);
+    }
+
+    .faq__sp {
+        position: absolute;
+        left: 10%;
+        top: 65%;
+        z-index: -1;
+        max-width: rem(100px);
+        user-select: none;
+        pointer-events: none;
+        animation: faqOne 6s linear 0s infinite alternate none;
+
+        @include xl-screen {
+            left: 5%;
+        }
+
+        @include md-screen {
+            max-width: rem(40px);
+            left: 0%;
+        }
+
+        @include sm-screen {
+            display: none;
+        }
+
+        &.sp2 {
+            left: auto;
+            right: 10%;
+            top: 35%;
+            animation: faqTwo 6s linear 0s infinite alternate none;
+        }
+
+        &.sp3 {
+            left: 15%;
+            top: 25%;
+            max-width: rem(70px);
+            animation: faqThree 6s linear 0s infinite alternate none;
+
+            @include md-screen {
+                max-width: rem(40px);
+            }
+        }
+    }
+
+    @keyframes faqOne {
+        0% {
+            transform: scale(1) rotate(0deg) translateY(0px);
+        }
+
+        100% {
+            transform: scale(0.6) rotate(-40deg) translateY(300px);
+        }
+    }
+
+    @keyframes faqTwo {
+        0% {
+            transform: scale(1) rotate(0deg) translateY(0px);
+        }
+
+        100% {
+            transform: scale(0.6) rotate(40deg) translateY(-300px);
+        }
+    }
+
+    @keyframes faqThree {
+        0% {
+            transform: scale(1) rotate(0deg) translateY(0px);
+        }
+
+        100% {
+            transform: scale(0.6) translateY(-300px);
+        }
+    }
+
+    .faq__title {
+        text-align: center;
+        margin-bottom: rem(111px);
+        max-width: rem(590px);
+        margin-left: auto;
+        margin-right: auto;
+
+        @include xl-screen {
+            margin-bottom: rem(86px);
+        }
+
+        @include lg-screen {
+            margin-bottom: rem(64px);
+        }
+
+        @include md-screen {
+            margin-bottom: rem(58px);
+            max-width: rem(360px);
+        }
+
+        @include sm-screen {
+            margin-bottom: rem(46px);
+        }
+
+        h2 {
+            font-size: rem(64px);
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: 0;
+
+            @include xl-screen {
+                font-size: rem(54px);
+            }
+
+            @include lg-screen {
+                font-size: rem(44px);
+            }
+
+            @include md-screen {
+                font-size: rem(34px);
+            }
+
+            @include xsm-screen {
+                font-size: rem(30px);
+            }
+
+            span {
+                font-weight: 300;
+            }
+        }
+    }
+
+    .faq__main__blk {
+        max-width: rem(800px);
+        margin-left: auto;
+        margin-right: auto;
+
+        @include lg-screen {
+            max-width: rem(700px);
+        }
+
+        @include md-screen {
+            max-width: rem(600px);
+        }
+
+        @include sm-screen {
+            max-width: rem(480px);
+        }
+
+        .accordion-button {
+            padding: rem(30px) rem(50px) rem(30px) rem(30px);
+            font-size: rem(24px);
+            color: hsl(var(--heading-color));
+            background-color: transparent;
+            font-weight: 500;
+
+            @include lg-screen {
+                font-size: rem(20px);
+                padding: rem(26px) rem(50px) rem(26px) rem(26px);
+            }
+
+            @include md-screen {
+                font-size: rem(18px);
+                padding: rem(20px) rem(50px) rem(20px) rem(20px);
+            }
+        }
+
+        .accordion-item {
+            color: hsl(var(--heading-color));
+            background-color: transparent;
+            border: rem(1px) solid hsl(var(--text-color)) !important;
+            border-radius: rem(16px);
+            overflow: hidden;
+            margin-bottom: rem(40px);
+            transition: .5s;
+
+            @include md-screen {
+                border-radius: rem(10px);
+                margin-bottom: rem(26px);
+            }
+
+            @include sm-screen {
+                margin-bottom: rem(22px);
+            }
+        }
+
+        .accordion-item:nth-child(odd) {
+            transform: rotate(-5deg);
+        }
+
+        .accordion-item:first-of-type {
+            border-top-left-radius: rem(16px);
+            border-top-right-radius: rem(16px);
+
+            @include md-screen {
+                border-radius: rem(10px);
+            }
+        }
+
+        .accordion-item:last-of-type {
+            border-bottom-right-radius: rem(16px);
+            border-bottom-left-radius: rem(16px);
+
+            @include md-screen {
+                border-radius: rem(10px);
+            }
+        }
+
+        .accordion-button:focus {
+            border-color: transparent;
+            box-shadow: none;
+        }
+
+        .accordion-body {
+            padding: rem(0px) rem(20px) rem(20px) rem(20px);
+            font-size: rem(16px);
+            font-weight: 400;
+            color: hsl(var(--text-color));
+
+            @include md-screen {
+                font-size: rem(14px);
+            }
+        }
+
+        .accordion-button:not(.collapsed) {
+            color: hsl(var(--heading-color));
+            background-color: transparent;
+            box-shadow: none;
+        }
+
+        .accordion-button::after {
+            display: none;
+        }
+
+        .faq__icon {
+            position: absolute;
+            right: rem(15px);
+            top: 50%;
+            content: "";
+            transform: translateY(-50%);
+            opacity: 0;
+            width: rem(30px);
+            height: rem(30px);
+            border: rem(2px) solid hsl(var(--text-color));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: rem(18px);
+            transition: .3s;
+
+            @include md-screen {
+                width: rem(24px);
+                height: rem(24px);
+                font-size: rem(16px);
+            }
+
+            @include sm-screen {
+                width: rem(20px);
+                height: rem(20px);
+                font-size: rem(12px);
+                border-width: rem(1px);
+            }
+        }
+
+        .accordion-button[aria-expanded="true"] .faq__minus {
+            opacity: 1;
+            transform: translateY(-50%) rotate(360deg);
+        }
+
+        .accordion-button[aria-expanded="false"] .faq__plus {
+            opacity: 1;
+            transform: translateY(-50%) rotate(360deg);
+        }
+
+        .accordion-item.active {
+            transform: rotate(0deg);
+        }
+    }
+}
+
+/* =========================== FAQ Section End Here ========================= */

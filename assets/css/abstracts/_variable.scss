@@ -1,0 +1,76 @@
+// /* Font Family*/
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* ========================= Css Variables Start ======================== */
+:root {
+  /* Font Family */
+  --heading-font: 'ClashDisplay-Variable';
+  --body-font: "Poppins", sans-serif;
+
+  /* ========================= Theme Color Start ============================= */
+
+  /* Base Color */
+  @include colorVariable(--base, #14FF8A, 10);
+
+  /* Base Two Color */
+  @include colorVariable(--base-two, #D9FF00, 10);
+
+  /* ========================= Theme Color End ============================= */
+
+  /* ========================= Color Variables Start =========================== */
+  // White Color
+  @include colorVariable(--white, #ffffff);
+
+  // Body Color
+  @include colorVariable(--body-color, #FFFFFF);
+
+  // heading-color
+  @include colorVariable(--heading-color, #282828);
+
+  // Paragraph Color
+  @include colorVariable(--text-color, #555555);
+
+  // Black Color
+  @include colorVariable(--black, #000);
+
+  //Border Color
+  @include colorVariable(--border-color, #e0e0e0);
+
+  // Section Background
+  @include colorVariable(--section-bg, #FAFAFA);
+
+  --background-color: var(--white);
+
+  /* ================================ Box Shadow Start =============================== */
+  // Header Box shadow
+  --header-box-shadow: 0px -1px 15px 3px hsl(var(--black) / 0.3);
+  // Mobile bottom fix menu box shadow
+  --mobile-box-shadow: 0px -1px 5px 0px hsl(var(--black) / 0.92);
+  // Card box shadow
+  --box-shadow: 0px 2px 15px hsl(var(--black) / 0.05);
+  /* ================================ Box Shadow End =============================== */
+
+  /* ============================== Bootstrap Modifier Start ============================== */
+  /* Primary Color */
+  @include colorVariable(--primary, #0007cc, 5);
+
+  /* Secondary Color */
+  @include colorVariable(--secondary, #6d767e, 5);
+
+  /* Success Color */
+  @include colorVariable(--success, #1bcc00, 5);
+
+  /* Danger Color */
+  @include colorVariable(--danger, #fb4646, 5);
+
+  /* Warning Color */
+  @include colorVariable(--warning, #eb9c00, 5);
+
+  /* Info Color */
+  @include colorVariable(--info, #00bbff, 5);
+
+  /* ============================== Bootstrap Modifier End ============================== */
+
+}
+
+/* ========================= Css Variables End =========================== */

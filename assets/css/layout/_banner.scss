@@ -1,0 +1,212 @@
+/* =========================== Banner Section Start Here ========================= */
+.banner__area {
+    padding-top: rem(260px);
+    padding-bottom: rem(50px);
+    position: relative;
+    z-index: 1;
+
+    @include xl-screen {
+        padding-top: rem(228px);
+    }
+
+    @include lg-screen {
+        padding-top: rem(180px);
+    }
+
+    @include md-screen {
+        padding-top: rem(140px);
+    }
+
+    @include msm-screen {
+        padding-top: rem(120px);
+    }
+
+    .banner__bg {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        z-index: -1;
+        user-select: none;
+        pointer-events: none;
+
+        @include sm-screen {
+            height: rem(480px);
+        }
+
+        @include msm-screen {
+            height: rem(450px);
+        }
+
+        img {
+            width: 100%;
+
+            @include sm-screen {
+                height: 100%;
+            }
+
+            @include msm-screen {
+                height: 100%;
+            }
+        }
+    }
+
+    .banner__topbar {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: rem(10px);
+        flex-wrap: wrap;
+        margin-bottom: rem(66px);
+
+        @include lg-screen {
+            margin-bottom: rem(40px);
+        }
+
+        @include md-screen {
+            margin-bottom: rem(30px);
+        }
+
+        @include sm-screen {
+            margin-bottom: rem(20px);
+        }
+
+        @include msm-screen {
+            justify-content: center;
+            text-align: center;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: rem(30px);
+        }
+
+        .banner__btn {
+            margin-top: rem(28px);
+
+            @include xl-screen {
+                margin-top: rem(25px);
+            }
+
+            @include lg-screen {
+                margin-top: rem(20px);
+            }
+
+            @include md-screen {
+                margin-top: rem(15px);
+            }
+
+            @include sm-screen {
+                margin-top: rem(11px);
+            }
+
+            @include msm-screen {
+                margin-top: rem(0px);
+            }
+        }
+    }
+
+    .banner__title h2 {
+        margin-bottom: 0;
+        font-size: rem(96px);
+        text-transform: uppercase;
+        font-weight: 600;
+
+        @include xl-screen {
+            font-size: rem(80px);
+        }
+
+        @include lg-screen {
+            font-size: rem(65px);
+        }
+
+        @include md-screen {
+            font-size: rem(50px);
+        }
+
+        @include sm-screen {
+            font-size: rem(36px);
+        }
+
+        span {
+            display: block;
+            font-weight: 300;
+        }
+    }
+
+    .banner__btn .common__btn span:first-child {
+        width: rem(150px);
+    }
+
+    .banner__btn .common__btn span:last-child i {
+        transform: rotate(-135deg);
+    }
+
+    .banner__thumb video {
+        width: 100%;
+        border-radius: rem(40px);
+
+        @include lg-screen {
+            border-radius: rem(30px);
+        }
+
+        @include md-screen {
+            border-radius: rem(20px);
+        }
+
+        @include msm-screen {
+            border-radius: rem(15px);
+        }
+    }
+
+    .banner__thumb iframe {
+        width: 100%;
+        height: 600px;
+        border-radius: 20px;
+
+        @include lg-screen {
+            height: rem(500px);
+        }
+
+        @include md-screen {
+            height: rem(350px);
+        }
+
+        @include sm-screen {
+            height: rem(300px);
+        }
+
+        @include msm-screen {
+            border-radius: rem(10px);
+            height: rem(230px);
+        }
+    }
+
+    .banner__thumb img {
+        width: 100%;
+        height: 600px;
+        border-radius: 40px;
+        object-fit: cover;
+
+        @include lg-screen {
+            border-radius: rem(30px);
+            height: rem(500px);
+        }
+
+        @include md-screen {
+            border-radius: rem(20px);
+            height: rem(350px);
+        }
+
+        @include sm-screen {
+            border-radius: rem(20px);
+            height: rem(300px);
+        }
+
+        @include msm-screen {
+            border-radius: rem(15px);
+            height: rem(230px);
+        }
+    }
+
+}
+
+/* =========================== Banner Section End Here ========================= */

@@ -1,0 +1,274 @@
+/* ================================= Blog Section Css Start Here ============================= */
+.blog__area {
+  position: relative;
+  z-index: 1;
+  padding-top: rem(100px);
+  padding-bottom: rem(96px);
+
+  @include xl-screen {
+    padding-top: rem(52px);
+    padding-bottom: rem(72px);
+  }
+
+  @include lg-screen {
+    padding-bottom: rem(52px);
+
+    .g-5,
+    .gx-5 {
+      --bs-gutter-x: 2rem;
+    }
+
+    .g-5,
+    .gy-5 {
+      --bs-gutter-y: 2rem;
+    }
+  }
+
+  @include md-screen {
+    padding-bottom: rem(23px);
+  }
+
+  @include sm-screen {
+    padding-top: rem(40px);
+  }
+
+  @include msm-screen {
+    padding-top: rem(23px);
+  }
+
+  .blog__bg {
+    position: absolute;
+    left: 0;
+    top: rem(-300px);
+    z-index: -1;
+    width: 100%;
+    pointer-events: none;
+    user-select: none;
+  }
+
+  .blog__sp {
+    position: absolute;
+    left: rem(80px);
+    top: 32%;
+    z-index: -1;
+    width: 100%;
+    pointer-events: none;
+    user-select: none;
+    max-width: rem(120px);
+    animation: blogOne 6s linear 0s infinite alternate none;
+
+    @include xl-screen {
+      display: none;
+    }
+
+    @include lg-screen {
+      display: none;
+    }
+  }
+
+  @keyframes blogOne {
+    0% {
+      transform: scale(1) rotate(0deg) translateY(0px);
+    }
+
+    100% {
+      transform: scale(0.6) rotate(-40deg) translateY(300px);
+    }
+  }
+
+  .blog__topbar {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: rem(10px);
+    flex-wrap: wrap;
+    margin-bottom: rem(79px);
+
+    @include xl-screen {
+      margin-bottom: rem(51px);
+    }
+
+    @include lg-screen {
+      margin-bottom: rem(40px);
+    }
+
+    @include md-screen {
+      margin-bottom: rem(33px);
+    }
+
+    @include sm-screen {
+      margin-bottom: rem(26px);
+    }
+
+    @include msm-screen {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    &__title h2 {
+      font-size: rem(64px);
+      font-weight: 600;
+      margin-bottom: 0;
+      text-transform: uppercase;
+
+      @include xl-screen {
+        font-size: rem(54px);
+      }
+
+      @include lg-screen {
+        font-size: rem(44px);
+      }
+
+      @include md-screen {
+        font-size: rem(34px);
+      }
+
+      @include xsm-screen {
+        font-size: rem(30px);
+      }
+
+      span {
+        display: block;
+        font-weight: 300;
+      }
+    }
+
+    &__btn a span:first-child {
+      width: rem(150px);
+    }
+  }
+}
+
+.blog__main {
+  &:hover .blog__main__img img:nth-child(1) {
+    transform: translateY(0) scaleY(1);
+    opacity: 1;
+    filter: blur(0);
+  }
+
+  &:hover .blog__main__img img:nth-child(2) {
+    transform: translateY(-50%) scaleY(2);
+    opacity: 0;
+    filter: blur(10px);
+  }
+
+  &>a {
+    margin-bottom: rem(32px);
+    width: 100%;
+  }
+
+  &__img {
+    width: 100%;
+    height: rem(530px);
+    overflow: hidden;
+    border-radius: rem(32px);
+    position: relative;
+    z-index: 1;
+
+    @include lg-screen {
+      height: rem(400px);
+      border-radius: rem(24px);
+    }
+
+    @include md-screen {
+      height: rem(300px);
+      border-radius: rem(15px);
+    }
+
+    img:nth-child(1) {
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 1;
+      transition: .6s;
+      transform: translateY(50%) scaleY(2);
+      opacity: 0;
+      filter: blur(10px);
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: .6s;
+    }
+  }
+
+  &__content span {
+    display: block;
+    font-size: rem(16px);
+    font-weight: 400;
+    color: hsl(var(--text-color));
+    margin-bottom: rem(16px);
+    text-transform: uppercase;
+
+    @include md-screen {
+      font-size: rem(14px);
+    }
+  }
+
+  &__content h4 {
+    font-size: rem(24px);
+    text-transform: capitalize;
+    margin-bottom: 0;
+
+    @include md-screen {
+      font-size: rem(20px);
+    }
+  }
+
+  &__content a:nth-child(2) {
+    margin-bottom: rem(25px);
+  }
+
+  &__content a:last-child {
+    font-size: rem(14px);
+    font-weight: 500;
+    text-transform: uppercase;
+    color: hsl(var(--text-color));
+    display: flex;
+    align-items: center;
+    border-bottom: rem(1px) solid hsl(var(--heading-color));
+    width: fit-content;
+    gap: rem(5px);
+    padding: rem(4px) rem(0px);
+    position: relative;
+    z-index: 1;
+    transition: .3s;
+
+    i {
+      font-size: rem(16px);
+      transform: rotate(-45deg);
+      transition: .1s;
+    }
+
+    &::after {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 0;
+      z-index: -1;
+      background-color: hsl(var(--heading-color));
+      content: "";
+      transition: .4s;
+    }
+
+    &:hover::after {
+      height: 100%;
+    }
+
+    &:hover {
+      color: hsl(var(--white));
+      padding: rem(4px) rem(10px);
+    }
+
+    &:hover i {
+      transform: rotate(0deg);
+    }
+  }
+}
+
+/* ================================= Blog Section Css End Here ================================= */

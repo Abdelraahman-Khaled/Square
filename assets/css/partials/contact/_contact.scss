@@ -1,0 +1,211 @@
+/* =========================== Contact Section Start Here ========================= */
+.contact__info {
+    padding-top: rem(100px);
+    padding-bottom: rem(100px);
+
+    @include lg-screen {
+        padding-top: rem(60px);
+        padding-bottom: rem(60px);
+    }
+
+    @include md-screen {
+        padding-top: rem(40px);
+        padding-bottom: rem(40px);
+    }
+
+    @include sm-screen {
+        padding-top: rem(10px);
+        padding-bottom: rem(10px);
+    }
+
+    &__single {
+        text-align: center;
+        max-width: rem(320px);
+        margin-left: auto;
+        margin-right: auto;
+
+        @include lg-screen {
+            max-width: rem(272px);
+        }
+
+        span {
+            display: block;
+            margin-bottom: rem(10px);
+            font-size: rem(40px);
+
+            @include lg-screen {
+                font-size: rem(30px);
+            }
+        }
+
+        h4 {
+            font-size: rem(24px);
+            text-transform: capitalize;
+
+            @include lg-screen {
+                font-size: rem(20px);
+                margin-bottom: 16px;
+            }
+        }
+
+        p {
+            font-size: rem(15px);
+
+            @include lg-screen {
+                font-size: rem(13px);
+            }
+
+            a {
+                color: hsl(var(--grey));
+                transition: .3s;
+
+                &:hover {
+                    color: hsl(var(--base));
+                }
+            }
+        }
+    }
+}
+
+.contact__form {
+    position: relative;
+    z-index: 1;
+    padding-top: rem(100px);
+    padding-bottom: rem(100px);
+
+    @include lg-screen {
+        padding-top: rem(60px);
+        padding-bottom: rem(60px);
+    }
+
+    @include sm-screen {
+        padding-top: rem(79px);
+        padding-bottom: rem(42px);
+    }
+
+    .hero__wrap__users__title span {
+        font-family: var(--body-font);
+    }
+
+    .contact__bg {
+        position: absolute;
+        left: 0;
+        top: rem(-300px);
+        width: 100%;
+        user-select: none;
+        pointer-events: none;
+        z-index: -1;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &__title {
+        max-width: rem(750px);
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: rem(50px);
+        margin-top: rem(20px);
+
+        @include xl-screen {
+            max-width: rem(625px);
+        }
+
+        @include lg-screen {
+            max-width: rem(525px);
+            margin-bottom: rem(35px);
+        }
+
+        @include md-screen {
+            max-width: rem(390px);
+            margin-bottom: rem(25px);
+        }
+
+        @include sm-screen {
+            max-width: rem(390px);
+        }
+
+        @include msm-screen {
+            max-width: 95%;
+        }
+
+        h2 {
+            font-size: rem(64px);
+            margin-bottom: 0;
+            text-transform: uppercase;
+
+            @include xl-screen {
+                font-size: rem(54px);
+            }
+
+            @include lg-screen {
+                font-size: rem(44px);
+            }
+
+            @include md-screen {
+                font-size: rem(34px);
+            }
+
+            @include xsm-screen {
+                font-size: rem(30px);
+            }
+
+            span {
+                font-weight: 300;
+            }
+        }
+    }
+}
+
+.contact__form__main {
+    max-width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include lg-screen {
+
+        .g-5,
+        .gy-5 {
+            --bs-gutter-y: 2rem;
+        }
+
+        .g-5,
+        .gx-5 {
+            --bs-gutter-x: 2rem;
+        }
+    }
+
+    @include md-screen {
+
+        max-width: 85%;
+
+        .g-5,
+        .gy-5 {
+            --bs-gutter-y: 1.5rem;
+        }
+
+        .g-5,
+        .gx-5 {
+            --bs-gutter-x: 1.5rem;
+        }
+    }
+
+    @include msm-screen {
+        max-width: 90%;
+    }
+
+    &__single {
+        button {
+            margin-left: auto;
+            margin-right: auto;
+
+            span:first-child {
+                width: rem(150px);
+            }
+        }
+    }
+}
+
+/* =========================== Contact Section End Here ========================= */

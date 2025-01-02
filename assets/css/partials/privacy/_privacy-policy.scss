@@ -1,0 +1,188 @@
+/* =========================== Privacy Page Start Here ========================= */
+.privacy__area {
+    position: relative;
+    z-index: 1;
+    padding-top: rem(50px);
+    padding-bottom: rem(100px);
+
+    @include md-screen {
+        padding-top: rem(30px);
+        padding-bottom: rem(20px);
+    }
+
+    .privacy__bg {
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: -2;
+        user-select: none;
+        pointer-events: none;
+        width: 100%;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .accordion {
+        background-color: hsl(var(--text-color) / .02);
+        backdrop-filter: blur(5px);
+        padding: rem(40px) rem(30px);
+        border-radius: rem(20px);
+
+        @include md-screen {
+            padding: rem(35px) rem(20px);
+            border-radius: rem(14px);
+        }
+    }
+
+    .accordion-item {
+        background-color: transparent;
+        border: none;
+    }
+
+    .accordion-body ul {
+        display: flex;
+        flex-direction: column;
+        gap: rem(14px);
+
+        @include sm-screen {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include msm-screen {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+        }
+
+        li a {
+            display: flex;
+            align-items: flex-start;
+            gap: rem(8px);
+            font-size: rem(16px);
+            font-weight: 400;
+            color: hsl(var(--text-color));
+            text-transform: capitalize;
+            transition: .3s;
+
+            @include md-screen {
+                font-size: rem(13px);
+            }
+
+            img {
+                flex: 0 0 auto;
+                width: rem(10px);
+                margin-top: rem(5px);
+            }
+
+            &:hover {
+                color: hsl(var(--text-color) / .5);
+            }
+        }
+    }
+
+    .accordion-button {
+        padding: rem(5px) rem(0px);
+        font-size: rem(16px);
+        color: hsl(var(--heading-color));
+        background-color: transparent;
+        font-weight: 600;
+        text-transform: capitalize;
+        gap: rem(10px);
+        font-family: var(--body-font);
+
+        @include md-screen {
+            font-size: rem(14px);
+        }
+
+        span {
+            width: rem(10px);
+            height: rem(2px);
+            background-color: hsl(var(--heading-color) / .2);
+            margin-top: rem(-2px);
+            transition: .3s;
+        }
+
+        &:focus {
+            border-color: transparent;
+            box-shadow: none;
+        }
+
+        &::after {
+            display: none;
+        }
+    }
+
+    .accordion-button:not(.collapsed) {
+        color: hsl(var(--heading-color));
+        background-color: transparent;
+        box-shadow: none;
+
+        span {
+            width: rem(20px);
+            background-color: hsl(var(--heading-color) / .6);
+        }
+    }
+
+    .privacy__wrap {
+        display: grid;
+        grid-template-columns: rem(300px) 1fr;
+        gap: rem(70px);
+
+        @include md-screen {
+            grid-template-columns: rem(250px) 1fr;
+            gap: rem(40px);
+        }
+
+        @include sm-screen {
+            grid-template-columns: 1fr;
+            gap: rem(40px);
+        }
+
+        &__content__single {
+            h4 {
+                font-size: rem(18px);
+                text-transform: capitalize;
+                margin-bottom: rem(6px);
+                font-family: var(--body-font);
+            }
+
+            p {
+                margin-bottom: rem(20px);
+
+                @include md-screen {
+                    font-size: rem(14px);
+                }
+
+                a {
+                    color: hsl(var(--heading-color));
+                    font-weight: 600;
+
+                    &:hover {
+                        text-decoration: underline;
+                        color: hsl(var(--heading-color));
+                    }
+                }
+            }
+
+            ul {
+                list-style: decimal;
+                padding-left: rem(18px);
+                margin-bottom: rem(30px);
+
+                li {
+                    font-size: rem(16px);
+                    color: hsl(var(--text-color));
+                    font-weight: 400;
+
+                    @include md-screen {
+                        font-size: rem(14px);
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* =========================== Privacy Page End Here ========================= */

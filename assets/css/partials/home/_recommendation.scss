@@ -1,0 +1,260 @@
+/* =========================== Recommendation Section Start Here ========================= */
+.recom__area {
+    position: relative;
+    z-index: 1;
+    padding-top: rem(180px);
+    padding-bottom: rem(80px);
+
+    @include xl-screen {
+        padding-top: rem(135px);
+        padding-bottom: rem(60px);
+    }
+
+    @include lg-screen {
+        padding-top: rem(107px);
+        padding-bottom: rem(50px);
+    }
+
+    @include md-screen {
+        padding-top: rem(91px);
+        padding-bottom: rem(40px);
+    }
+
+    @include sm-screen {
+        padding-top: rem(71px);
+        padding-bottom: rem(22px);
+    }
+
+    .recom__bg {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        z-index: -1;
+        user-select: none;
+        pointer-events: none;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .recom__title {
+        margin-bottom: rem(76px);
+
+        @include xl-screen {
+            margin-bottom: rem(50px);
+        }
+
+        @include lg-screen {
+            margin-bottom: rem(40px);
+        }
+
+        @include md-screen {
+            margin-bottom: rem(32px);
+        }
+
+        @include sm-screen {
+            text-align: center;
+            margin-bottom: rem(28px);
+        }
+
+        h2 {
+            font-size: rem(64px);
+            font-weight: 600;
+            margin-bottom: 0;
+            text-transform: uppercase;
+
+            @include xl-screen {
+                font-size: rem(54px);
+            }
+
+            @include lg-screen {
+                font-size: rem(44px);
+            }
+
+            @include md-screen {
+                font-size: rem(34px);
+            }
+
+            @include xsm-screen {
+                font-size: rem(30px);
+            }
+
+            span {
+                font-weight: 300;
+                display: block;
+            }
+        }
+    }
+
+    .recom__thumb img {
+        width: 100%;
+        border-radius: rem(40px);
+
+        @include xl-screen {
+            border-radius: rem(30px);
+        }
+
+        @include lg-screen {
+            border-radius: rem(20px);
+        }
+    }
+
+    .recom__content {
+        position: relative;
+        z-index: 1;
+        background-color: hsl(225, 40%, 98%);
+        border-radius: rem(40px);
+        min-height: rem(434px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        overflow: hidden;
+
+        @include xl-screen {
+            border-radius: rem(30px);
+            min-height: rem(373px);
+        }
+
+        @include lg-screen {
+            border-radius: rem(20px);
+            min-height: rem(312px);
+        }
+
+        @include md-screen {
+            min-height: rem(230px);
+        }
+
+        @include sm-screen {
+            min-height: rem(260px);
+        }
+
+        @include xsm-screen {
+            min-height: rem(230px);
+        }
+
+        &::after {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            content: "";
+            background-color: hsl(var(--base));
+            width: rem(250px);
+            height: rem(250px);
+            border-radius: 50%;
+            filter: blur(rem(50px));
+            z-index: -1;
+            opacity: .6;
+
+            @include md-screen {
+                width: rem(180px);
+                height: rem(180px);
+            }
+        }
+
+        .recom__sp {
+            position: absolute;
+            left: rem(-27px);
+            top: 0;
+            z-index: -1;
+            max-width: rem(100px);
+            opacity: .3;
+            pointer-events: none;
+            user-select: none;
+            animation: rec1 6s linear 0s infinite alternate none;
+
+            @include xl-screen {
+                max-width: rem(70px);
+            }
+
+            @include lg-screen {
+                max-width: rem(60px);
+            }
+
+            &.recom__sp__two {
+                right: 0;
+                bottom: rem(-36px);
+                left: auto;
+                top: auto;
+                opacity: 1;
+                animation: rec2 6s linear 0s infinite alternate none;
+
+                @include xl-screen {
+                    bottom: rem(-20px);
+                }
+
+                @include lg-screen {
+                    bottom: rem(-20px);
+                }
+            }
+        }
+
+        @keyframes rec1 {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(100px);
+            }
+        }
+
+        @keyframes rec2 {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-100px);
+            }
+        }
+
+        h4 {
+            font-size: rem(64px);
+            font-weight: 600;
+            margin-bottom: 0;
+
+            @include lg-screen {
+                font-size: rem(45px);
+            }
+
+            @include md-screen {
+                font-size: rem(35px);
+            }
+
+            span {
+                font-size: rem(128px);
+
+                @include lg-screen {
+                    font-size: rem(100px);
+                }
+
+                @include md-screen {
+                    font-size: rem(70px);
+                }
+            }
+        }
+
+        p {
+            color: hsl(var(--heading-color));
+            font-size: rem(24px);
+            font-weight: 400;
+            text-transform: uppercase;
+            font-family: var(--heading-font);
+
+            @include lg-screen {
+                font-size: rem(20px);
+            }
+
+            @include md-screen {
+                font-size: rem(16px);
+            }
+        }
+    }
+}
+
+/* =========================== Recommendation Section End Here ========================= */

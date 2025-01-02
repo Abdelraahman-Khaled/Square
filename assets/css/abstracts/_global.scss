@@ -1,0 +1,137 @@
+/* ====================== Common Button CSS Start ==================== */
+.common__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: rem(1px);
+  position: relative;
+  z-index: 1;
+  width: fit-content;
+  transition: .3s;
+}
+
+.common__btn span:first-child {
+  width: rem(100px);
+  height: rem(52px);
+  background-color: hsl(var(--base));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: rem(40px);
+  color: hsl(var(--heading-color));
+  font-size: rem(16px);
+  font-weight: 500;
+  text-transform: capitalize;
+  transition: .3s;
+}
+
+.common__btn span:last-child {
+  width: rem(52px);
+  height: rem(52px);
+  // background-color: #14FF8A;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: hsl(var(--heading-color));
+  font-size: rem(20px);
+  transition: .3s;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.common__btn span:last-child::after {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: hsl(var(--base));
+  content: "";
+  z-index: -1;
+  transition: all 0s ease;
+}
+
+.common__btn:hover span:last-child::after {
+  width: 60%;
+  transition: all 1s ease;
+}
+
+.common__btn span:last-child i {
+  transform: rotate(-45deg);
+  transition: .3s;
+}
+
+.common__btn::after {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 0;
+  transform: translate(-50%, -50%);
+  height: 0%;
+  background-color: hsl(var(--base));
+  border-radius: rem(40px);
+  transition: .4s;
+  content: "";
+  z-index: -1;
+}
+
+.common__btn:hover {
+  gap: 0;
+}
+
+.common__btn:hover::after {
+  width: 100%;
+  height: 100%;
+}
+
+.common__btn:hover span:last-child i {
+  transform: rotate(0deg) !important;
+}
+
+.common__btn:hover span:last-child {
+  margin-left: rem(-25px);
+}
+
+/* ====================== Common Button CSS End ==================== */
+
+
+/* ====================== Cursor CSS Start ==================== */
+.cursor {
+  width: rem(20px);
+  height: rem(20px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: hsl(var(--heading-color) / .4);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 2;
+
+  @include md-screen {
+    display: none;
+  }
+}
+
+/* ====================== Cursor CSS End ==================== */
+
+
+/* ====================== Scroll Bar CSS Start ==================== */
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 rem(6px) hsl(var(--black) / .3);
+  background-color: hsl(var(--white));
+}
+
+::-webkit-scrollbar {
+  width: rem(8px);
+  background-color: hsl(var(--white));
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: hsl(var(--base));
+  border-radius: rem(10px);
+}
+
+/* ====================== Scroll Bar CSS End ==================== */

@@ -1,0 +1,250 @@
+/* =========================== Hero Section Start Here ========================= */
+.hero__area {
+    padding-top: rem(170px);
+    position: relative;
+    z-index: 1;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    overflow: hidden;
+
+    @include lg-screen {
+        padding-top: rem(120px);
+    }
+
+    .hero__sp {
+        position: absolute;
+        left: 8%;
+        top: 17%;
+        z-index: -1;
+        max-width: rem(108px);
+        user-select: none;
+        pointer-events: none;
+        animation: heroS1 8s linear 0s infinite alternate none;
+
+        @include xl-screen {
+            max-width: rem(80px);
+        }
+
+        @include lg-screen {
+            max-width: rem(60px);
+        }
+
+        @include sm-screen {
+            max-width: rem(40px);
+            left: 0%;
+        }
+
+        &.hero__sp__two {
+            left: auto;
+            right: 8%;
+            top: 30%;
+            animation: heroS2 8s linear 0s infinite alternate none;
+
+            @include sm-screen {
+                right: 6%;
+            }
+        }
+    }
+
+    @keyframes heroS1 {
+        0% {
+            transform: translateY(0);
+        }
+
+        100% {
+            transform: translateY(50px) translateX(50px) rotate(50deg);
+        }
+    }
+
+    @keyframes heroS2 {
+        0% {
+            transform: translateY(0);
+        }
+
+        100% {
+            transform: translateY(-50px) translateX(50px) rotate(50deg);
+        }
+    }
+
+    .hero__wrap {
+
+        &__title {
+            margin-bottom: rem(14px);
+
+            @include sm-screen {
+                margin-bottom: rem(40px);
+                margin-top: rem(10px);
+            }
+
+            h1 {
+                font-size: rem(120px);
+                font-weight: 600;
+                text-transform: uppercase;
+                text-align: center;
+                margin-bottom: 0;
+
+                @include xl-screen {
+                    font-size: rem(85px);
+                }
+
+                @include md-screen {
+                    font-size: rem(70px);
+                }
+
+                @include sm-screen {
+                    font-size: rem(45px);
+                }
+
+                @include msm-screen {
+                    font-size: rem(40px);
+                }
+
+                @include xsm-screen {
+                    font-size: rem(32px);
+                }
+
+                span {
+                    font-weight: 300;
+                    display: block;
+                }
+            }
+        }
+
+        .hero__thumb {
+            position: relative;
+            z-index: 1;
+            transform: perspective(1200px) rotateX(50deg) scale(.9);
+            max-width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+
+            @include xl-screen {
+                max-width: 86%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            @include sm-screen {
+                transform: perspective(1200px) rotateX(0deg) scale(1);
+            }
+
+            img {
+                width: 100%;
+            }
+
+            span {
+                width: 95%;
+                height: rem(200px);
+                background-color: hsl(226, 100%, 97%);
+                border-radius: rem(42px);
+                position: absolute;
+                left: 50%;
+                top: 0;
+                z-index: -1;
+                transform: translateX(-50%);
+
+                &:first-child {
+                    top: rem(10px);
+
+                    @include sm-screen {
+                        top: rem(-8px);
+                        border-radius: rem(10px);
+                    }
+                }
+
+                &:nth-child(2) {
+                    top: rem(10px);
+                    background-color: hsl(227, 100%, 96%);
+                    z-index: -2;
+                    width: 88%;
+
+                    @include sm-screen {
+                        top: rem(-16px);
+                        border-radius: rem(10px);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.hero__wrap__users {
+    display: flex;
+    align-items: center;
+    background-color: hsl(var(--white) / .4);
+    width: fit-content;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding: rem(4px) rem(10px);
+    border-radius: rem(40px);
+    gap: rem(6px);
+
+    @include msm-screen {
+        gap: rem(2px);
+        padding: rem(2px);
+    }
+
+    &__img {
+        display: flex;
+        align-items: center;
+
+        span {
+            width: rem(32px);
+            height: rem(32px);
+            overflow: hidden;
+            border: rem(2px) solid hsl(var(--white));
+            border-radius: 50%;
+            margin-left: rem(-16px);
+            transition: .3s;
+
+            @include lg-screen {
+                transform: scale(.8);
+            }
+
+            @include msm-screen {
+                transform: scale(.7);
+                margin-left: rem(-20px);
+            }
+
+            &:hover {
+                transform: translateY(-5px);
+            }
+
+            &:first-child {
+                border-color: transparent;
+                margin-left: 0;
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+
+    &__title>span {
+        font-size: rem(18px);
+        font-weight: 400;
+        display: inline-block;
+        font-family: "Permanent Marker", cursive;
+        text-transform: capitalize;
+
+        @include xl-screen {
+            font-size: rem(16px);
+        }
+
+        @include lg-screen {
+            font-size: rem(14px);
+        }
+
+        @include msm-screen {
+            font-size: rem(12px);
+            padding-right: rem(10px);
+        }
+    }
+}
+
+/* =========================== Hero Section End Here ========================= */

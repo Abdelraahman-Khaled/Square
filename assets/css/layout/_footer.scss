@@ -1,0 +1,632 @@
+/* ============= Footer Start Here ======================= */
+.footer__area {
+  padding-top: rem(100px);
+  position: relative;
+  z-index: 1;
+  margin-top: auto;
+  background-image: url(../images/footer/bg-line.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: hsl(var(--white));
+
+  @include xl-screen {
+    padding-top: rem(73px);
+  }
+
+  @include lg-screen {
+    padding-top: rem(46px);
+  }
+
+  @include sm-screen {
+    padding-top: rem(17px);
+  }
+
+  .footer__sp1 {
+    position: absolute;
+    right: 8%;
+    top: 23%;
+    z-index: -1;
+    max-width: rem(125px);
+    user-select: none;
+    pointer-events: none;
+    animation: footOne 6s linear 0s infinite alternate none;
+
+    @include xl-screen {
+      max-width: rem(100px);
+    }
+
+    @include lg-screen {
+      max-width: rem(70px);
+      right: 4%;
+    }
+
+    @include md-screen {
+      right: 0;
+      max-width: rem(50px);
+    }
+
+    @include sm-screen {
+      right: 2%;
+      top: 30%;
+      max-width: rem(35px);
+    }
+
+    @include msm-screen {
+      display: none;
+    }
+  }
+
+  .footer__sp2 {
+    position: absolute;
+    left: 10%;
+    top: 43%;
+    z-index: -1;
+    max-width: rem(100px);
+    user-select: none;
+    pointer-events: none;
+    animation: footTwo 6s linear 0s infinite alternate none;
+
+    @include xl-screen {
+      max-width: rem(80px);
+    }
+
+    @include lg-screen {
+      max-width: rem(60px);
+      left: 4%;
+    }
+
+    @include md-screen {
+      left: 0;
+      max-width: rem(50px);
+    }
+
+    @include sm-screen {
+      top: 35%;
+      max-width: rem(35px);
+    }
+
+    @include msm-screen {
+      display: none;
+    }
+  }
+
+  .footer__sp3 {
+    position: absolute;
+    left: 30%;
+    top: 10%;
+    z-index: -1;
+    max-width: rem(40px);
+    user-select: none;
+    pointer-events: none;
+    animation: footThree 2s linear 0s infinite alternate none;
+
+    @include lg-screen {
+      max-width: rem(30px);
+    }
+
+    @include md-screen {
+      max-width: rem(20px);
+    }
+
+    @include msm-screen {
+      display: none;
+    }
+  }
+
+  @keyframes footOne {
+    0% {
+      transform: scale(1) rotate(0deg) translateY(0px);
+    }
+
+    100% {
+      transform: scale(0.6) rotate(40deg) translateY(300px);
+    }
+  }
+
+  @keyframes footTwo {
+    0% {
+      transform: scale(1) rotate(0deg) translateY(0px);
+    }
+
+    100% {
+      transform: scale(0.6) rotate(40deg) translateY(-300px);
+    }
+  }
+
+  @keyframes footThree {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+
+    100% {
+      transform: scale(0.5);
+      opacity: .5;
+    }
+  }
+
+  &::after,
+  &::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 30%;
+    content: "";
+    z-index: -2;
+    background-image: linear-gradient(to bottom, hsl(var(--white)), transparent);
+  }
+
+  &::after {
+    top: auto;
+    bottom: 0;
+    height: 50%;
+    transform: rotate(180deg);
+  }
+
+  .footer__subs {
+    padding-bottom: rem(160px);
+
+    @include lg-screen {
+      padding-bottom: rem(140px);
+    }
+
+    @include md-screen {
+      padding-bottom: rem(100px);
+    }
+
+    @include sm-screen {
+      padding-bottom: rem(70px);
+    }
+
+    &__title {
+      margin-bottom: rem(70px);
+      text-align: center;
+
+      @include lg-screen {
+        margin-bottom: rem(40px);
+      }
+
+      @include md-screen {
+        margin-bottom: rem(30px);
+      }
+
+      @include sm-screen {
+        margin-bottom: rem(20px);
+      }
+
+      h2 {
+        margin-bottom: 0;
+        font-size: rem(96px);
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: 600;
+        line-height: rem(115px);
+
+        @include lg-screen {
+          font-size: rem(80px);
+          line-height: rem(100px);
+        }
+
+        @include md-screen {
+          font-size: rem(60px);
+          line-height: rem(75px);
+        }
+
+        @include sm-screen {
+          font-size: rem(45px);
+          line-height: rem(55px);
+        }
+
+        @include msm-screen {
+          font-size: rem(35px);
+          line-height: rem(45px);
+        }
+
+        span {
+          display: block;
+          font-weight: 300;
+        }
+      }
+    }
+
+    &__form {
+      position: relative;
+      z-index: 1;
+      width: rem(375px);
+      height: rem(70px);
+      margin-left: auto;
+      margin-right: auto;
+
+      @include lg-screen {
+        height: rem(58px);
+      }
+
+      @include md-screen {
+        width: rem(260px);
+        height: rem(52px);
+      }
+
+      @include sm-screen {
+        width: rem(220px);
+        height: rem(48px);
+      }
+
+      input {
+        width: 100%;
+        height: 100%;
+        border: none;
+        outline: none;
+        font-size: rem(31px);
+        font-weight: 400;
+        color: hsl(var(--heading-color));
+        border-bottom: rem(2px) solid hsl(var(--heading-color));
+        padding-right: rem(60px);
+        font-family: var(--heading-font);
+
+        @include lg-screen {
+          font-size: rem(26px)
+        }
+
+        @include md-screen {
+          font-size: rem(22px);
+          padding-right: rem(40px);
+        }
+
+        @include sm-screen {
+          font-size: rem(18px);
+          padding-right: rem(30px);
+        }
+
+        &::placeholder {
+          color: hsl(var(--heading-color) / .5);
+        }
+      }
+
+      input:focus~button {
+        transform: translateY(-50%) rotate(45deg);
+      }
+
+      button {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 2;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        color: hsl(var(--heading-color));
+        font-size: rem(38px);
+        transition: .3s;
+
+        @include lg-screen {
+          font-size: rem(34px);
+        }
+
+        @include md-screen {
+          font-size: rem(30px);
+        }
+
+        @include sm-screen {
+          font-size: rem(24px);
+        }
+
+        i {
+          transition: .3s;
+          transform: rotate(-45deg);
+        }
+
+        &:hover {
+          color: hsl(var(--text-color) / .6);
+        }
+      }
+    }
+  }
+
+  .footer__address {
+    max-width: rem(240px);
+
+    @include sm-screen {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    @include msm-screen {
+      text-align: center;
+    }
+
+    h4 {
+      font-size: rem(18px);
+      font-weight: 500;
+      text-transform: uppercase;
+      margin-bottom: rem(14px);
+
+      @include lg-screen {
+        font-size: rem(16px);
+      }
+
+      @include sm-screen {
+        margin-bottom: rem(6px);
+      }
+    }
+
+    p {
+      font-size: rem(18px);
+
+      @include lg-screen {
+        font-size: rem(16px);
+      }
+
+      @include sm-screen {
+        font-size: rem(14px);
+      }
+    }
+  }
+
+  .footer__menu {
+    border-top: rem(1px) solid hsl(var(--black) / .12);
+    border-bottom: rem(1px) solid hsl(var(--black) / .12);
+    padding: rem(20px) rem(0px);
+    margin-top: rem(100px);
+
+    @include lg-screen {
+      margin-top: rem(60px);
+      padding: rem(14px) 0;
+    }
+
+    @include md-screen {
+      margin-top: rem(40px);
+    }
+
+    &__wrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: rem(10px);
+      flex-wrap: wrap;
+
+      @include sm-screen {
+        justify-content: center;
+      }
+
+      &__item {
+        flex: 0 0 auto;
+
+        ul {
+          display: flex;
+          align-items: center;
+          gap: rem(16px);
+
+          @include md-screen {
+            gap: rem(10px);
+          }
+
+          li {
+            display: flex;
+            align-items: center;
+
+            span {
+              color: hsl(var(--text-color));
+              font-size: rem(6px);
+            }
+
+            a {
+              color: hsl(var(--text-color));
+              font-size: rem(16px);
+              font-weight: 400;
+              text-transform: capitalize;
+              transition: .4s;
+
+              @include lg-screen {
+                font-size: rem(14px);
+              }
+
+              &:hover {
+                text-decoration: underline;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .footer__bottombar {
+    padding-top: rem(17px);
+    padding-bottom: rem(17px);
+
+    @include lg-screen {
+      padding-top: rem(14px);
+      padding-bottom: rem(14px);
+    }
+
+    &__wrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: rem(10px);
+      flex-wrap: wrap;
+
+      @include sm-screen {
+        justify-content: center;
+      }
+    }
+  }
+
+  .footer__social {
+    flex: 0 0 auto;
+
+    ul {
+      display: flex;
+      align-items: center;
+      gap: rem(32px);
+
+      @include md-screen {
+        gap: rem(20px);
+      }
+
+      li a {
+        display: flex;
+        align-items: center;
+        gap: rem(8px);
+        color: hsl(var(--text-color));
+        font-size: rem(16px);
+        font-weight: 400;
+        text-transform: capitalize;
+        transition: .4s;
+        position: relative;
+        z-index: 1;
+
+        @include lg-screen {
+          font-size: rem(14px);
+        }
+
+        i {
+          margin-top: rem(-2px);
+        }
+
+        &::after {
+          position: absolute;
+          right: rem(-16px);
+          top: 50%;
+          transform: translateY(-50%);
+          z-index: -1;
+          content: "";
+          width: rem(1px);
+          height: rem(12px);
+          background-color: hsl(var(--black) / .15);
+
+          @include md-screen {
+            right: rem(-10px);
+          }
+        }
+      }
+
+      li:last-child a::after {
+        display: none;
+      }
+
+      li:first-child a:hover {
+        color: hsl(214, 89%, 52%);
+      }
+
+      li:nth-child(2) a:hover {
+        color: hsl(340, 75%, 54%);
+      }
+
+      li:last-child a:hover {
+        color: hsl(201, 100%, 35%);
+      }
+    }
+  }
+
+  .footer__copy span {
+    display: flex;
+    align-items: center;
+    gap: rem(5px);
+    color: hsl(var(--text-color));
+    font-size: rem(16px);
+    font-weight: 400;
+    text-transform: capitalize;
+
+    @include lg-screen {
+      font-size: rem(14px);
+    }
+
+    @include msm-screen {
+      display: block;
+      text-align: center;
+    }
+
+    a {
+      font-weight: 500;
+      color: hsl(var(--heading-color));
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.footer__subs__label {
+  width: rem(190px);
+  height: rem(190px);
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: rem(70px);
+  margin-left: auto;
+  margin-right: auto;
+  user-select: none;
+  pointer-events: none;
+
+  @include lg-screen {
+    transform: scale(.8);
+    margin-bottom: rem(20px);
+  }
+
+  @include md-screen {
+    transform: scale(.7);
+    margin-bottom: rem(10px);
+  }
+
+  @include sm-screen {
+    transform: scale(.6);
+    margin-bottom: rem(-16px);
+  }
+
+  @include msm-screen {
+    margin-bottom: rem(-20px);
+  }
+
+  .footer__subs__shr {
+    width: rem(130px);
+    height: rem(130px);
+    background-color: hsl(var(--section-bg));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0;
+
+    img {
+      width: rem(70px);
+      user-select: none;
+      pointer-events: none;
+    }
+
+    .footer__circle__text {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      color: hsl(var(--heading-color));
+      font-size: rem(15px);
+      font-weight: 400;
+      animation: textRotation 8s linear infinite;
+      user-select: none;
+      pointer-events: none;
+
+      span {
+        position: absolute;
+        left: 50%;
+        font-size: rem(15px);
+        transform-origin: 0 rem(95px);
+      }
+
+      @keyframes textRotation {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+    }
+  }
+}
+
+/* ============= Footer End Here ======================= */
