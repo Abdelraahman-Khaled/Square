@@ -41,21 +41,21 @@
 ========================================
 */
 
-(function($) {
+(function ($) {
     'use strict';
 
     // ============== Header Hide Click On Body Js Start ========
-    $('.header-button').on('click', function() {
+    $('.header-button').on('click', function () {
         $('.body-overlay').toggleClass('show');
     });
-    $('.body-overlay').on('click', function() {
+    $('.body-overlay').on('click', function () {
         $('.header-button').trigger('click');
         $(this).removeClass('show');
     });
     // =============== Header Hide Click On Body Js End =========
 
     // // ========================= Header Sticky Js Start ==============
-    $(window).on('scroll', function() {
+    $(window).on('scroll', function () {
         if ($(window).scrollTop() >= 300) {
             $('.header').addClass('fixed-header');
         } else {
@@ -67,7 +67,7 @@
     // //============================ Scroll To Top Icon Js Start =========
     var btn = $('.scroll-top');
 
-    $(window).on('scroll', function() {
+    $(window).on('scroll', function () {
         if ($(window).scrollTop() > 300) {
             btn.addClass('show');
         } else {
@@ -75,7 +75,7 @@
         }
     });
 
-    btn.on('click', function(e) {
+    btn.on('click', function (e) {
         e.preventDefault();
         $('html, body').animate({
             scrollTop: 0
@@ -83,22 +83,22 @@
     });
 
     // ========================== Header Hide Scroll Bar Js Start =====================
-    $('.navbar-toggler.header-button').on('click', function() {
+    $('.navbar-toggler.header-button').on('click', function () {
         $('body').toggleClass('scroll-hide-sm');
     });
-    $('.body-overlay').on('click', function() {
+    $('.body-overlay').on('click', function () {
         $('body').removeClass('scroll-hide-sm');
     });
     // ========================== Header Hide Scroll Bar Js End =====================
 
     // ========================== Small Device Header Menu On Click Dropdown menu collapse Stop Js Start =====================
-    $('.dropdown-item').on('click', function() {
+    $('.dropdown-item').on('click', function () {
         $(this).closest('.dropdown-menu').addClass('d-block');
     });
     // ========================== Small Device Header Menu On Click Dropdown menu collapse Stop Js End =====================
 
     // ========================== Add Attribute For Bg Image Js Start =====================
-    $('.bg-img').css('background', function() {
+    $('.bg-img').css('background', function () {
         var bg = 'url(' + $(this).data('background-image') + ')';
         return bg;
     });
@@ -107,14 +107,14 @@
     // ========================== add active class to ul>li top Active current page Js Start =====================
     function dynamicActiveMenuClass(selector) {
         let fileName = window.location.pathname.split('/').reverse()[0];
-        selector.find('li').each(function() {
+        selector.find('li').each(function () {
             let anchor = $(this).find('a');
             if ($(anchor).attr('href') == fileName) {
                 $(this).addClass('active');
             }
         });
         // if any li has active element add class
-        selector.children('li').each(function() {
+        selector.children('li').each(function () {
             if ($(this).find('.active').length) {
                 $(this).addClass('active');
             }
@@ -141,12 +141,6 @@
         }
     });
     // ========================= Text Circle Js End ===================
-
-
-    // ========================= Nice Select Js Start ===================
-    $('select').niceSelect();
-    // ========================= Nice Select Js End ===================
-
 
     // ========================= Owl Carousel Js Start ===================
     $('.testimonial__wrap').owlCarousel({
@@ -293,7 +287,7 @@
 
     // ================== Sidebar Menu Js Start ===============
     // Sidebar Dropdown Menu Start
-    $(document).on('click', '.has-dropdown > a', function() {
+    $(document).on('click', '.has-dropdown > a', function () {
         $('.sidebar-submenu').slideUp(200);
         if ($(this).parent().hasClass('active')) {
             $('.has-dropdown').removeClass('active');
@@ -306,11 +300,11 @@
     });
     // Sidebar Dropdown Menu End
     // Sidebar Icon & Overlay js
-    $('.navigation-bar').on('click', function() {
+    $('.navigation-bar').on('click', function () {
         $('.sidebar-menu').addClass('show-sidebar');
         $('.sidebar-overlay').addClass('show');
     });
-    $('.sidebar-menu__close, .sidebar-overlay').on('click', function() {
+    $('.sidebar-menu__close, .sidebar-overlay').on('click', function () {
         $('.sidebar-menu').removeClass('show-sidebar');
         $('.sidebar-overlay').removeClass('show');
     });
@@ -319,12 +313,12 @@
 
 
     // ========================= Service hover add class Js Start =====================
-    $(".service__main__single").on("mouseenter", function() {
+    $(".service__main__single").on("mouseenter", function () {
         $(".service__main__single").removeClass("active");
         $(this).addClass("active");
     });
 
-    $(".service__main__single").on("mouseleave", function() {
+    $(".service__main__single").on("mouseleave", function () {
         $(".service__main__single").removeClass("active"); // Remove class from all elements
         $(this).addClass("active"); // Add class only to the last hovered element
     });
@@ -339,7 +333,7 @@
         initializeAccordionToggler();
 
         function initializeAccordionToggler() {
-            $(ACCORDION_SELECTOR).on('show.bs.collapse hide.bs.collapse', function(event) {
+            $(ACCORDION_SELECTOR).on('show.bs.collapse hide.bs.collapse', function (event) {
                 const $accordionItem = $(event.target).closest('.accordion-item');
 
                 // Toggle 'active' class based on event type
@@ -557,9 +551,9 @@
         });
 
         let xTo = gsap.quickTo(".cursor", "x", {
-                duration: 0.6,
-                ease: "power3"
-            }),
+            duration: 0.6,
+            ease: "power3"
+        }),
             yTo = gsap.quickTo(".cursor", "y", {
                 duration: 0.6,
                 ease: "power3"
@@ -576,10 +570,98 @@
     // ========================= Preloader Js Start =====================
     if ($('.preloader').length) {
         $('body').addClass('loading-s');
-        $(window).on('load', function() {
+        $(window).on('load', function () {
             $('.preloader').fadeOut();
             $('body').removeClass('loading-s');
         });
     }
     // ========================= Preloader Js End=====================
 })(jQuery);
+
+// function sendMail() {
+//     let parms = {
+//         from_name: document.getElementById("inputName").value,
+//         // email: document.getElementById("inputEmail").value,
+//         from_number: document.getElementById("inputNumber").value,
+//         subject: document.getElementById("inputSubject").value,
+//         message: document.getElementById("inputMessage").value,
+//     }
+//     emailjs.send("service_zywfsrs","template_0gs6p97",parms).then(alert("email sent!"))
+// }
+
+function sendMail() {
+    const form = document.getElementById("contactForm");
+
+    // Validate inputs
+    const name = form.querySelector("[name='name']").value.trim();
+    const email = form.querySelector("[name='email']").value.trim();
+    const phone = form.querySelector("[name='number']").value.trim();
+    const subject = form.querySelector("[name='subject']").value.trim();
+    const message = form.querySelector("[name='message']").value.trim();
+    const messageRequired = form.querySelector("[name='message']");
+    const linkField = form.querySelector("[name='link']"); // Rename for clarity
+    const linkExists = linkField !== null; // Check if the link field exists
+
+    if (
+        !name ||
+        !email ||
+        !phone ||
+        !subject ||
+        (linkExists && !linkField.value.trim()) || // Validate link if it exists
+        (messageRequired.hasAttribute("required") && !message) // Check message if required
+    ) {
+        Toastify({
+            text: "يرجى ملء جميع الحقول المطلوبة",
+            duration: 3000,
+            close: true,
+            gravity: "top",
+            position: "right",
+            style: {
+                background: "linear-gradient(to right, #ff5f6d, #ffc371)",
+                fontSize: "16px"
+            },
+            onClick: function () { } // Callback after click
+        }).showToast();
+        return; // Exit the function if validation fails
+    }
+
+    // Proceed to send the email if validation passes
+    const serviceID = "service_zywfsrs";
+    const templateID = "template_0gs6p97";
+
+    emailjs.sendForm(serviceID, templateID, "#contactForm")
+        .then(() => {
+            Toastify({
+                text: "تم الإرسال بنجاح",
+                duration: 3000,
+                close: true,
+                gravity: "top",
+                position: "right",
+                style: {
+                    background: "linear-gradient(to right, #45bfbb, #22234d)",
+                    fontSize: "16px"
+                },
+                onClick: function () { } // Callback after click
+            }).showToast();
+
+            form.reset(); // Reset the form after successful submission
+        }, (err) => {
+            Toastify({
+                text: "يوجد مشكلة في  الإرسال",
+                duration: 3000,
+                close: true,
+                gravity: "top",
+                position: "right",
+                style: {
+                    background: "linear-gradient(to right, #45bfbb, #22234d)",
+                    fontSize: "16px"
+                },
+                onClick: function () { } // Callback after click
+            }).showToast();
+            console.error("Error:", err);
+        });
+}
+
+
+
+
